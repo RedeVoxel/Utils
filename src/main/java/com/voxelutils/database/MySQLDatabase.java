@@ -2,13 +2,13 @@ package com.voxelutils.database;
 
 import java.sql.*;
 
-public class DatabaseConnection {
+public class MySQLDatabase {
     String host, port, database, username, password;
     Connection connection;
     Statement statement;
 
-    public DatabaseConnection(String host, String port, String database,
-                              String username, String password) {
+    public MySQLDatabase(String host, String port, String database,
+                         String username, String password) {
         this.host = host;
         this.port = port;
         this.database = database;
