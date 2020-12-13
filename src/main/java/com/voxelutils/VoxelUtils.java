@@ -1,5 +1,13 @@
 package com.voxelutils;
 
 public class VoxelUtils {
-    public static String Error_Prefix = "[Error]";
+    private static String ErrorPrefix = "[Error]";
+
+    public static String getErrorPrefix() {
+        return ErrorPrefix;
+    }
+
+    public static void setErrorPrefix(String errorPrefix) {
+        ErrorPrefix = errorPrefix;
+    }
 }
