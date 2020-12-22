@@ -1,14 +1,22 @@
 package com.voxelutils.database;
 
-import java.sql.*;
+import com.voxelutils.messages.Error;
+import lombok.Getter;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class MySQLDatabase {
     String host, port, database, username, password;
     Connection connection;
+
+    @Getter
     Statement statement;
 
     public MySQLDatabase(String host, String port, String database,
-                         String username, String password) {
+                         String username, String password) throws Error {
         this.host = host;
         this.port = port;
         this.database = database;
@@ -21,7 +29,7 @@ public class MySQLDatabase {
             openConnection();
             statement = connection.createStatement();
         } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+            throw new Error(e.getMessage());
         }
     }
 
@@ -35,9 +43,5 @@ public class MySQLDatabase {
         connection = DriverManager.getConnection("jdbc:mysql://"
                 + this.host + ":" + this.port + "/"
                 + this.database, this.username, this.password);
-    }
-
-    public Statement getStatement() {
-        return this.statement;
     }
 }
