@@ -1,4 +1,4 @@
-package com.voxelutils;
+package com.redevoxel.voxelutils;
 
 import lombok.Getter;
 import lombok.Setter;

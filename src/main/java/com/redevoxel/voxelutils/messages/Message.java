@@ -1,4 +1,4 @@
-package com.voxelutils.messages;
+package com.redevoxel.voxelutils.messages;
 
 import org.bukkit.ChatColor;
 

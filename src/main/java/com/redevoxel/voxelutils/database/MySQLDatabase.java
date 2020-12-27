@@ -1,6 +1,6 @@
-package com.voxelutils.database;
+package com.redevoxel.voxelutils.database;
 
-import com.voxelutils.messages.Error;
+import com.redevoxel.voxelutils.messages.Error;
 import lombok.Getter;
 
 import java.sql.Connection;
